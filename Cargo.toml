@@ -1,0 +1,28 @@
+[package]
+name = "api-example"
+version = "0.1.0"
+edition = "2021"
+
+homepage = "https://github.com/byte3org/rust-api-example"
+repository = "https://github.com/byte3org/rust-api-example"
+documentation = "https://github.com/byte3org/rust-api-example"
+
+description = "example api using rust"
+readme = "README.md"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+rocket = {version = "0.5.0-rc.2", features = ["json"]}
+serde = {version = "1.0.137"}
+rand = {version = "0.8"}
+uuid = { version = "1.1.2", features = ["serde", "v4"] }
+diesel = { version = "2.0.2", features = ["postgres", "numeric", "chrono"] }
+diesel_migrations = "2.0.0"
+bigdecimal = { version = "0.3.0", features = ["serde"] }
+dotenvy = "0.15"
+chrono = "0.4.22"
+rocket_sync_db_pools =  {version = "0.1.0-rc.2", features = ["diesel_postgres_pool"] }
+schemars = "0.8.10"
+okapi = { version = "0.7.0-rc.1" }
+rocket_okapi = { version = "0.8.0-rc.2", features = ["swagger"] }
